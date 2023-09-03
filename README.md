@@ -5,6 +5,11 @@ It takes a standard cron string with five time fields (minute, hour, day of mont
 and it formats the cron expression as a table with field names in the first 14 columns and the corresponding times as 
 space-separated lists.
 
+## System Requirements
+
+- Python >=3.6
+- `pipenv` Python package manager
+
 ## Usage
 
 To use this program, follow these steps:
@@ -13,12 +18,18 @@ To use this program, follow these steps:
 
 2. Open a terminal or command prompt in the root folder.
 
-3. Install the package.
+3. Install all dependencies and active the virtual environment:
+   ```shell
+   pipenv install
+   pipenv shell
+   ```
+
+4. Install the package as a binary.
    ```shell
    pip install --editable .
    ```
 
-4. Run the program with a cron expression as an argument. For example:
+5. Now you have access to `cron-parser` binary. Run the program with a cron expression as an argument. For example:
 
    ```shell
    cron-parser "*/15 0 1,15 * 1-5 /usr/bin/find"
@@ -26,7 +37,7 @@ To use this program, follow these steps:
 
    Replace `"*/15 0 1,15 * 1-5 /usr/bin/find"` with your own cron expression.
 
-5. The program will output the formatted cron expression as a table, like this:
+6. The program will output the formatted cron expression as a table, like this:
 
    ```
    minute        0 15 30 45
@@ -37,7 +48,7 @@ To use this program, follow these steps:
    command       /usr/bin/find
    ```
 
-6. You can run the tests to see if the code works correctly:
+7. You can run the tests to see if the code works correctly:
    ```shell
    pytest
    ```
