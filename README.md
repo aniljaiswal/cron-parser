@@ -9,7 +9,7 @@ space-separated lists.
 
 To use this program, follow these steps:
 
-1. Clone the repository to your local machine and `cd` into it.
+1. Clone the repository to your local machine.
 
 2. Open a terminal or command prompt in the root folder.
 
@@ -35,6 +35,11 @@ To use this program, follow these steps:
    month         1 2 3 4 5 6 7 8 9 10 11 12
    day of week   1 2 3 4 5
    command       /usr/bin/find
+   ```
+
+6. You can run the tests to see if the code works correctly:
+   ```shell
+   pytest
    ```
 
 ## Features
